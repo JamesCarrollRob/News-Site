@@ -46,17 +46,23 @@ h1 {
 }
 
 .link-banner {
-    /* border: .5em;
+    border: .5em;
     border-color: black;
-    border-style: solid; */
+    border-style: solid;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
     background-color: rgb(32, 175, 218);
 }
 
+.link-banner li {
+    padding: 2em;
+    border: solid black;
+    flex-grow: 2;
+}
+
 li {
-    display: inline;
+    display: inline-flex;
 }
 
 .site-nav-list {
