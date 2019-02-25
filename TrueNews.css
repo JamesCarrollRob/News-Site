@@ -30,11 +30,10 @@
 a:hover {
     background: yellow;
     color: blue;
-    text
 }
 
 .site-header:hover {
-    background: orange;
+    background: linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5));
     color: blue;
 }
 
@@ -45,21 +44,44 @@ h1 {
     font-family: fantasy;
 }
 
-.link-banner {
+.container {
     border: .5em;
     border-color: black;
     border-style: solid;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 1em;
+    padding-bottom: 1em;
     background-color: rgb(32, 175, 218);
+    background-image: linear-gradient(to top, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("img/news.jpg");
+    display: grid;
 }
 
-.link-banner li {
-    padding: 2em;
+.container li {
+    padding: 5em;
+    padding-top: .5em;
+    /* padding-bottom: 10em; */
     border: solid black;
-    flex-grow: 2;
+    max-width: 190px;
+    max-height: 190px;
+    box-sizing: border-box;
+    /* flex-grow: 1; */
+    /* flex-direction: row; */
+    /* display: grid;
+    grid-template-rows: auto; */
+    overflow: hidden;
+    text-align: center;
 }
+
+a {
+    top: 0px;
+    position: relative;
+}
+
+
+/* .linkDisplay {
+    position: relative;
+    top: 0%;
+} */
 
 li {
     display: inline-flex;
@@ -67,4 +89,69 @@ li {
 
 .site-nav-list {
     border-top: solid black;
+}
+
+.footer-display {
+    color: white;
+    background-color: black;
+    /* display: inline-flex; */
+    padding: 4em;
+}
+
+.footer-links {
+    background-color: darkgoldenrod;
+    padding: .5em;
+    text-align: center;
+}
+
+.footer-links li {
+    margin: 15px;
+}
+
+
+/* Image styling section */
+
+.imgPos {
+    position: relative;
+    top: 75px;
+}
+
+#euroImage {
+    background-image: url("img/euFlag.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#euroImage a {
+    color: black;
+}
+
+#asianImage {
+    background-image: url("img/dragon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#midEastImage {
+    background-image: url("img/midEast.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#africaImage {
+    background-image: url("img/africa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#usaImage {
+    background-image: url("img/usa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ausImage {
+    background-image: url("img/aus.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
