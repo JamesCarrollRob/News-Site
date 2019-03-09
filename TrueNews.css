@@ -1,12 +1,31 @@
+.card {
+    max-width: 190px;
+    max-height: 250px;
+}
+
+.card-body {
+    background-color: blue;
+    overflow: hidden;
+}
+
+.card-img-top img {
+    max-height: 133.69;
+}
+
 .title {
     color: black;
     font-family: 'Franklin Gothic Medium';
 }
 
-.body {
+
+/* .body {
     color: blue;
     font-family: 'Franklin Gothic Medium';
     text-align: center
+} */
+
+body {
+    background: url(https://2.bp.blogspot.com/-WFswCvfxqXk/W5gQqfAaISI/AAAAAAAAMUA/2rck7Sdds40raNevIYxITvrnNkLffN91gCK4BGAYYCw/s0/4d1442bd6c1ab961e1fdb99498c10bfc%2B%25281%2529.jpg)
 }
 
 .site-header {
@@ -25,6 +44,7 @@
     padding-bottom: 4%;
     font-style: italic;
     letter-spacing: 2px;
+    position: relative;
 }
 
 a:hover {
@@ -46,17 +66,19 @@ h1 {
 
 .container {
     border: .5em;
-    border-color: black;
+    border-color: #d6d62a #1982c4 #c41960;
     border-style: solid;
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: rgb(32, 175, 218);
+    /* background-color: rgb(32, 175, 218); */
     background-image: linear-gradient(to top, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url("img/news.jpg");
-    display: flex;
+    display: grid;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* display: inline-flex; */
+    /* justify-content: space-between; */
+    /* box-sizing: border-box; */
 }
 
 .container li {
@@ -70,10 +92,32 @@ h1 {
     text-align: center;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    margin-left: 2em;
+}
+
+.card-item {
+    padding: 2em;
+}
+
 a {
     top: 0px;
     position: relative;
     text-align: center;
+}
+
+.scrollButton {
+    /* position: absolute; */
+    /* top: 0; */
+    bottom: 0;
+    width: 3em;
+}
+
+.leftScroll {
+    left: 0;
 }
 
 
@@ -164,14 +208,20 @@ img {
     background-repeat: no-repeat;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
 
 /* media query */
 
 @media only screen and (max-device-width:768px) {
     /* newslinks magnify in tablet screens and smaller on hover  */
-    .container li:hover {
-        max-width: 250px;
-        max-height: 250px;
+    .card-container:hover {
+        max-width: 350px;
+        max-height: 350px;
     }
     li {
         display: flex;
